@@ -1,0 +1,95 @@
+.header{
+    border: .5pxsolid transparent ;
+    border-radius: 0 0 80em 80em/ 14em;
+    background: #5433FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    z-index: 9;
+}
+nav.show{
+    background: black;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor1{
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding:60px 0 ;
+}
+h1{
+    font-size: 50px;
+}
+/*Header mobile*/
+
+nav{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+    transition: ease-in-out 0.5s;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:0 40px ;
+    height: 70px;
+}
+    .enlaces-header{
+        position: fixed;
+        background-color: rgb(39, 38, 38);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+        transition: ease-in-out .5s ;
+    }
+    .nav .menudos{
+        clip-path: circle(133.8% at 100% 0);
+    }
+    .nav .enlaces-header a{
+        color: white;
+        text-decoration: none;
+    }
+    .hamburguer{
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        z-index: 12;
+        cursor: pointer;
+        transition: color 0.5s ease-in;
+    }
+    .hamburguer > i{
+        font-size: 25px;
+        line-height: 80px;
+        color: white;
+    }
+    @media (min-width:900px) {
+        /*Header*/
+        .hamburguer{
+            display: none;
+        }
+        .enlaces-header{
+            clip-path: none;
+            position: unset;
+            background: transparent;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .nav .enlaces-header a{
+            padding-inline:2rem;
+        }
+    }
