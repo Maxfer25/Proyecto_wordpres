@@ -178,6 +178,10 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+/** 
+ * taxonomias 
+*/
+require get_template_directory() . '/inc/taxonomies.php';
 
 /**
  * Load Jetpack compatibility file.
